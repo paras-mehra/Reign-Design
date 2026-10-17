@@ -1,0 +1,5348 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reign Design Custom Home Builders LLC | Atlanta General Contractor</title>
+
+    <meta name="description"
+        content="Reign Design Custom Home Builders LLC provides professional home building, remodeling and construction services in Atlanta, Georgia. Call +1 470-808-7960.">
+
+    <meta name="keywords"
+        content="custom home builders Atlanta, home remodeling, construction company, general contractor, home builder Georgia, residential construction, kitchen remodeling, bathroom remodeling, Reign Design">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- FAVICON -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23f5b400'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle'%3E🏠%3C/text%3E%3C/svg%3E">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FLATICON -->
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+
+    <style>
+        /* =========================================================
+           ROOT
+        ========================================================= */
+
+        :root {
+
+            --bg: #07111f;
+            --bg-secondary: #091624;
+            --bg-card: #101e2d;
+
+            --text: #f7f9fc;
+            --text-secondary: #aab8c8;
+
+            --yellow: #f5b400;
+            --yellow-light: #ffd55c;
+
+            --border: rgba(255, 255, 255, .09);
+
+            --shadow:
+                0 25px 70px rgba(0, 0, 0, .25);
+
+            --radius: 20px;
+
+            --transition:
+                all .35s cubic-bezier(.2, .65, .25, 1);
+        }
+
+
+        /* =========================================================
+           LIGHT MODE
+        ========================================================= */
+
+        body.light-mode {
+
+            --bg: #f6f8fb;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+
+            --text: #101a28;
+            --text-secondary: #667383;
+
+            --border: rgba(7, 17, 31, .10);
+
+            --shadow:
+                0 20px 55px rgba(16, 35, 55, .10);
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            line-height: 1.65;
+
+            overflow-x: hidden;
+
+            transition:
+                background .45s ease,
+                color .45s ease;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+
+            width: min(1160px, 92%);
+
+            margin: auto;
+        }
+
+        .section {
+            padding: 105px 0;
+        }
+
+
+        /* =========================================================
+           GLOBAL ICON ALIGNMENT
+        ========================================================= */
+
+        .icon-box i,
+        .service-icon i,
+        .contact-icon i,
+        .feature i,
+        .logo-icon i,
+        .theme-toggle i,
+        .trust-item i,
+        .hero-badge i,
+        .btn i,
+        .emergency-number i,
+        .floating-call i,
+        .faq-question i {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        /* =========================================================
+           SVG SERVICE ICONS
+           These do not depend on Flaticon
+        ========================================================= */
+
+        .service-svg {
+
+            width: 24px;
+            height: 24px;
+
+            display: block;
+
+            fill: none;
+
+            stroke: currentColor;
+
+            stroke-width: 2;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+
+            background:
+                rgba(7, 17, 31, .93);
+
+            backdrop-filter:
+                blur(18px);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        body.light-mode header.scrolled {
+
+            background:
+                rgba(255, 255, 255, .93);
+        }
+
+        /* REFACTORED NAVBAR FOR DESKTOP SCREENSHOT */
+        .navbar {
+
+            min-height: 82px;
+
+            display: grid;
+
+            grid-template-columns: auto 1fr auto;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        /* =========================================================
+           LOGO
+        ========================================================= */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .logo-icon {
+
+            width: 44px;
+            height: 44px;
+
+            display: grid;
+
+            place-items: center;
+
+            background: var(--yellow);
+
+            color: #07111f;
+
+            border-radius: 12px;
+
+            font-size: 21px;
+
+            box-shadow:
+                0 10px 30px rgba(245, 180, 0, .20);
+
+            transition: var(--transition);
+        }
+
+        .logo:hover .logo-icon {
+
+            transform:
+                rotate(-8deg) scale(1.05);
+        }
+
+        .logo-text {
+
+            font-family: "Manrope", sans-serif;
+
+            font-weight: 800;
+
+            font-size: 15px;
+
+            line-height: 1.1;
+
+            color: var(--text);
+        }
+
+        .logo-text span {
+
+            display: block;
+
+            margin-top: 4px;
+
+            color: var(--yellow);
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           NAVIGATION (CENTERED)
+        ========================================================= */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 27px;
+        }
+
+        nav a {
+
+            color: var(--text);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+
+            color: var(--yellow);
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================================================
+           HEADER CONTROLS (RIGHT SIDE)
+        ========================================================= */
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        /* =========================================================
+           THEME BUTTON
+        ========================================================= */
+
+        .theme-toggle {
+
+            width: 43px;
+            height: 43px;
+
+            min-width: 43px;
+
+            border-radius: 50%;
+
+            border: 1px solid var(--border);
+
+            background: rgba(255, 255, 255, .06);
+
+            color: var(--text);
+
+            display: grid;
+
+            place-items: center;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            position: relative;
+
+            z-index: 1002;
+        }
+
+        .theme-toggle i {
+
+            font-size: 16px;
+
+            line-height: 1;
+        }
+
+        .theme-toggle:hover {
+
+            background: var(--yellow);
+
+            color: #07111f;
+
+            transform:
+                rotate(15deg) scale(1.05);
+        }
+
+
+        /* =========================================================
+           CALL BUTTON
+        ========================================================= */
+
+        .nav-call {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--yellow);
+
+            color: #07111f;
+
+            padding: 12px 22px;
+
+            border-radius: 50px;
+
+            font-weight: 800;
+
+            transition: var(--transition);
+        }
+
+        .nav-call:hover {
+
+            color: #07111f;
+
+            background: var(--yellow-light);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           MOBILE MENU BUTTON
+        ========================================================= */
+
+        .menu-btn {
+
+            display: none;
+
+            width: 43px;
+            height: 43px;
+
+            min-width: 43px;
+
+            border-radius: 10px;
+
+            border: 1px solid var(--border);
+
+            background: rgba(255, 255, 255, .05);
+
+            color: var(--text);
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            place-items: center;
+
+            transition: var(--transition);
+
+            position: relative;
+
+            z-index: 1002;
+        }
+
+        .menu-btn:hover {
+
+            background: var(--yellow);
+
+            color: #07111f;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding:
+                145px 0 90px;
+
+            background:
+
+                linear-gradient(90deg,
+                    rgba(7, 17, 31, .98) 0%,
+                    rgba(7, 17, 31, .90) 45%,
+                    rgba(7, 17, 31, .45) 100%),
+
+                url("https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
+        }
+
+        body.light-mode .hero {
+
+            background:
+
+                linear-gradient(90deg,
+                    rgba(246, 248, 251, .97),
+                    rgba(246, 248, 251, .82),
+                    rgba(246, 248, 251, .40)),
+
+                url("https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            background:
+                rgba(245, 180, 0, .11);
+
+            border-radius: 50%;
+
+            filter: blur(90px);
+
+            right: -150px;
+            top: -150px;
+
+            animation:
+                heroGlow 7s ease-in-out infinite;
+        }
+
+        @keyframes heroGlow {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.18);
+            }
+        }
+
+
+        .hero-content {
+
+            max-width: 760px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .hero-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding:
+                9px 14px;
+
+            border:
+                1px solid rgba(245, 180, 0, .35);
+
+            background:
+                rgba(245, 180, 0, .09);
+
+            color:
+                var(--yellow-light);
+
+            border-radius:
+                50px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                22px;
+
+            animation:
+                fadeDown .8s ease both;
+        }
+
+        /* LIGHT MODE FIX FOR TRUSTED BADGE */
+        body.light-mode .hero-badge {
+            color: #000;
+            border-color: #000;
+            background: transparent;
+        }
+
+        .hero h1 {
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                clamp(43px, 6.3vw, 78px);
+
+            line-height:
+                1.02;
+
+            letter-spacing:
+                -3px;
+
+            color:
+                var(--text);
+
+            margin-bottom:
+                25px;
+
+            animation:
+                fadeUp .9s .1s ease both;
+        }
+
+        .hero h1 span {
+
+            color:
+                var(--yellow);
+        }
+
+        .hero p {
+
+            max-width:
+                650px;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                18px;
+
+            margin-bottom:
+                34px;
+
+            animation:
+                fadeUp .9s .2s ease both;
+        }
+
+        .hero-actions {
+
+            display:
+                flex;
+
+            gap:
+                14px;
+
+            flex-wrap:
+                wrap;
+
+            animation:
+                fadeUp .9s .3s ease both;
+        }
+
+
+        /* =========================================================
+           BUTTON
+        ========================================================= */
+
+        .btn {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                9px;
+
+            min-height:
+                53px;
+
+            padding:
+                0 23px;
+
+            border-radius:
+                10px;
+
+            font-size:
+                14px;
+
+            font-weight:
+                800;
+
+            border:
+                1px solid transparent;
+
+            cursor:
+                pointer;
+
+            transition:
+                var(--transition);
+        }
+
+        .btn-primary {
+
+            background:
+                var(--yellow);
+
+            color:
+                #07111f;
+
+            box-shadow:
+                0 12px 35px rgba(245, 180, 0, .18);
+        }
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(-4px);
+
+            background:
+                var(--yellow-light);
+
+            box-shadow:
+                0 18px 45px rgba(245, 180, 0, .28);
+        }
+
+        .btn-outline {
+
+            border-color:
+                rgba(255, 255, 255, .18);
+
+            background:
+                rgba(255, 255, 255, .04);
+
+            color:
+                var(--text);
+
+            backdrop-filter:
+                blur(10px);
+        }
+
+        .btn-outline:hover {
+
+            border-color:
+                var(--yellow);
+
+            color:
+                var(--yellow);
+
+            transform:
+                translateY(-4px);
+        }
+
+        /* LIGHT MODE FIX FOR REQUEST QUOTE BUTTON */
+        body.light-mode .btn-outline {
+            color: #000;
+            border-color: #000;
+        }
+
+        body.light-mode .btn-outline:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+        }
+
+
+        .hero-stats {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                35px;
+
+            margin-top:
+                55px;
+
+            padding-top:
+                25px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, .13);
+
+            animation:
+                fadeUp 1s .4s ease both;
+        }
+
+        .hero-stat strong {
+
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                26px;
+        }
+
+        .hero-stat span {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                13px;
+        }
+
+
+        /* =========================================================
+           TRUST BAR
+        ========================================================= */
+
+        .trust-bar {
+
+            background:
+                var(--yellow);
+
+            color:
+                #07111f;
+
+            padding:
+                20px 0;
+        }
+
+        .trust-inner {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                25px;
+        }
+
+        .trust-item {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                9px;
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            text-align:
+                center;
+        }
+
+
+        /* =========================================================
+           SECTION
+        ========================================================= */
+
+        .section-label {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                7px;
+
+            color:
+                var(--yellow);
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1.5px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                15px;
+        }
+
+        .section-title {
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                clamp(34px, 5vw, 55px);
+
+            line-height:
+                1.08;
+
+            color:
+                var(--text);
+
+            margin-bottom:
+                20px;
+
+            letter-spacing:
+                -1.5px;
+        }
+
+        .section-description {
+
+            max-width:
+                650px;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                16px;
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                75px;
+
+            align-items:
+                center;
+        }
+
+        .about-image {
+
+            position:
+                relative;
+        }
+
+        .about-image img {
+
+            height:
+                570px;
+
+            object-fit:
+                cover;
+
+            border-radius:
+                25px;
+
+            box-shadow:
+                var(--shadow);
+
+            transition:
+                transform .6s ease;
+        }
+
+        .about-image:hover img {
+
+            transform:
+                scale(1.015);
+        }
+
+        .experience-card {
+
+            position:
+                absolute;
+
+            right:
+                -25px;
+
+            bottom:
+                30px;
+
+            background:
+                var(--yellow);
+
+            color:
+                #07111f;
+
+            padding:
+                22px 25px;
+
+            border-radius:
+                16px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, .3);
+
+            animation:
+                floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .experience-card strong {
+
+            display:
+                block;
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                30px;
+
+            line-height:
+                1;
+        }
+
+        .experience-card span {
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+        }
+
+        .about-content p {
+
+            color:
+                var(--text-secondary);
+
+            margin-bottom:
+                20px;
+        }
+
+        .check-list {
+
+            list-style:
+                none;
+
+            display:
+                grid;
+
+            gap:
+                13px;
+
+            margin-top:
+                25px;
+        }
+
+        .check-list li {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            color:
+                var(--text);
+
+            font-weight:
+                600;
+        }
+
+        .check-list i {
+
+            width:
+                24px;
+
+            height:
+                24px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(245, 180, 0, .13);
+
+            color:
+                var(--yellow);
+
+            font-size:
+                11px;
+        }
+
+
+        /* =========================================================
+           SERVICES
+        ========================================================= */
+
+        .services {
+
+            background:
+                var(--bg-secondary);
+        }
+
+        .section-heading {
+
+            display:
+                flex;
+
+            align-items:
+                end;
+
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+
+            margin-bottom:
+                48px;
+        }
+
+        .services-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                22px;
+        }
+
+        .service-card {
+
+            background:
+                var(--bg-card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            overflow:
+                hidden;
+
+            transition:
+                transform .45s cubic-bezier(.2, .65, .25, 1),
+                box-shadow .45s ease,
+                border-color .45s ease;
+
+            position:
+                relative;
+        }
+
+        .service-card::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            border-radius:
+                inherit;
+
+            background:
+                linear-gradient(135deg,
+                    rgba(245, 180, 0, .12),
+                    transparent 35%);
+
+            opacity:
+                0;
+
+            transition:
+                opacity .4s ease;
+
+            pointer-events:
+                none;
+        }
+
+        .service-card:hover {
+
+            transform:
+                translateY(-10px);
+
+            border-color:
+                rgba(245, 180, 0, .38);
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, .20);
+        }
+
+        .service-card:hover::after {
+
+            opacity:
+                1;
+        }
+
+        .service-image {
+
+            height:
+                210px;
+
+            overflow:
+                hidden;
+
+            background:
+                #162536;
+        }
+
+        .service-image img {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            transition:
+                transform .7s cubic-bezier(.2, .65, .25, 1);
+        }
+
+        .service-card:hover .service-image img {
+
+            transform:
+                scale(1.08);
+        }
+
+        .service-body {
+
+            padding:
+                25px;
+        }
+
+
+        /* =========================================================
+           SERVICE ICON
+        ========================================================= */
+
+        .service-icon {
+
+            width:
+                48px;
+
+            height:
+                48px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                13px;
+
+            background:
+                rgba(245, 180, 0, .12);
+
+            color:
+                var(--yellow);
+
+            font-size:
+                20px;
+
+            margin-bottom:
+                17px;
+
+            transition:
+                var(--transition);
+
+            position:
+                relative;
+
+            z-index:
+                2;
+        }
+
+        .service-card:hover .service-icon {
+
+            background:
+                var(--yellow);
+
+            color:
+                #07111f;
+
+            transform:
+                translateY(-3px) rotate(-4deg);
+
+            box-shadow:
+                0 10px 25px rgba(245, 180, 0, .22);
+        }
+
+        .service-body h3 {
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                20px;
+
+            color:
+                var(--text);
+
+            margin-bottom:
+                9px;
+        }
+
+        .service-body p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                14px;
+
+            margin-bottom:
+                18px;
+        }
+
+        .service-link {
+
+            color:
+                var(--yellow);
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                7px;
+
+            transition:
+                var(--transition);
+        }
+
+        .service-link:hover {
+
+            gap:
+                11px;
+        }
+
+
+        /* =========================================================
+           EMERGENCY
+        ========================================================= */
+
+        .emergency {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            padding:
+                85px 0;
+
+            background:
+
+                linear-gradient(90deg,
+                    rgba(7, 17, 31, .96),
+                    rgba(7, 17, 31, .75)),
+
+                url("https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
+        }
+
+        .emergency-inner {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                35px;
+        }
+
+        .emergency h2 {
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                clamp(32px, 4vw, 48px);
+
+            line-height:
+                1.1;
+
+            color:
+                white;
+
+            margin-bottom:
+                12px;
+        }
+
+        .emergency p {
+
+            color:
+                #b9c5d1;
+
+            max-width:
+                620px;
+        }
+
+        .emergency-number {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            color:
+                var(--yellow);
+
+            font-size:
+                24px;
+
+            font-weight:
+                800;
+
+            white-space:
+                nowrap;
+
+            transition:
+                var(--transition);
+        }
+
+        .emergency-number:hover {
+
+            transform:
+                scale(1.03);
+        }
+
+
+        /* =========================================================
+           WHY CHOOSE
+        ========================================================= */
+
+        .why-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+        }
+
+        .why-image img {
+
+            height:
+                580px;
+
+            object-fit:
+                cover;
+
+            border-radius:
+                25px;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+        .features {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                18px;
+
+            margin-top:
+                35px;
+        }
+
+        .feature {
+
+            padding:
+                23px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                var(--bg-card);
+
+            border-radius:
+                16px;
+
+            transition:
+                var(--transition);
+        }
+
+        .feature:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(245, 180, 0, .35);
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, .10);
+        }
+
+        .feature i {
+
+            color:
+                var(--yellow);
+
+            font-size:
+                21px;
+        }
+
+        .feature h3 {
+
+            color:
+                var(--text);
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                17px;
+
+            margin:
+                13px 0 6px;
+        }
+
+        .feature p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                13px;
+        }
+
+
+        /* =========================================================
+           REVIEWS
+        ========================================================= */
+
+        .reviews {
+
+            background:
+                var(--bg-secondary);
+        }
+
+        .rating-box {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                18px;
+        }
+
+        .rating-number {
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                50px;
+
+            font-weight:
+                800;
+
+            color:
+                var(--text);
+        }
+
+        .stars {
+
+            color:
+                var(--yellow);
+
+            letter-spacing:
+                3px;
+
+            font-size:
+                17px;
+        }
+
+        .rating-text {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                13px;
+        }
+
+        .review-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                22px;
+
+            margin-top:
+                45px;
+        }
+
+        .review-card {
+
+            padding:
+                29px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                var(--bg-card);
+
+            border-radius:
+                18px;
+
+            transition:
+                var(--transition);
+        }
+
+        .review-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                var(--shadow);
+
+            border-color:
+                rgba(245, 180, 0, .25);
+        }
+
+        .review-top {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                18px;
+        }
+
+        .reviewer {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+        }
+
+        .review-avatar {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            border-radius:
+                50%;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            background:
+                rgba(245, 180, 0, .14);
+
+            color:
+                var(--yellow);
+
+            font-weight:
+                800;
+        }
+
+        .reviewer strong {
+
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            font-size:
+                14px;
+        }
+
+        .reviewer span {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                11px;
+        }
+
+        .review-card p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =========================================================
+           FAQ
+        ========================================================= */
+
+        .faq-wrap {
+
+            max-width:
+                850px;
+
+            margin:
+                45px auto 0;
+        }
+
+        .faq-item {
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .faq-question {
+
+            width:
+                100%;
+
+            background:
+                none;
+
+            border:
+                none;
+
+            color:
+                var(--text);
+
+            text-align:
+                left;
+
+            padding:
+                23px 0;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                20px;
+
+            cursor:
+                pointer;
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                16px;
+
+            font-weight:
+                700;
+        }
+
+        .faq-question i {
+
+            color:
+                var(--yellow);
+
+            transition:
+                .3s ease;
+        }
+
+        .faq-answer {
+
+            max-height:
+                0;
+
+            overflow:
+                hidden;
+
+            transition:
+                max-height .45s ease;
+        }
+
+        .faq-answer p {
+
+            color:
+                var(--text-secondary);
+
+            padding:
+                0 45px 22px 0;
+
+            font-size:
+                14px;
+        }
+
+        .faq-item.active .faq-question i {
+
+            transform:
+                rotate(45deg);
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            padding:
+                95px 0;
+        }
+
+        .cta-box {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background:
+                linear-gradient(120deg,
+                    #f5b400,
+                    #ffd55c);
+
+            color:
+                #07111f;
+
+            border-radius:
+                28px;
+
+            padding:
+                65px;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                35px;
+        }
+
+        .cta-box h2 {
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                clamp(31px, 4vw, 48px);
+
+            line-height:
+                1.08;
+
+            max-width:
+                650px;
+        }
+
+        .cta-box p {
+
+            margin-top:
+                12px;
+
+            max-width:
+                600px;
+
+            font-weight:
+                600;
+
+            opacity:
+                .75;
+        }
+
+        .cta-actions {
+
+            display:
+                flex;
+
+            gap:
+                10px;
+
+            flex-shrink:
+                0;
+        }
+
+        .cta-dark {
+
+            background:
+                #07111f;
+
+            color:
+                white;
+        }
+
+        .cta-dark:hover {
+
+            background:
+                #102238;
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+
+            background:
+                var(--bg-secondary);
+        }
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap:
+                55px;
+        }
+
+        .contact-info {
+
+            display:
+                grid;
+
+            gap:
+                15px;
+
+            margin-top:
+                35px;
+        }
+
+        .contact-item {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                15px;
+
+            padding:
+                19px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                14px;
+
+            background:
+                var(--bg-card);
+
+            transition:
+                var(--transition);
+        }
+
+        .contact-item:hover {
+
+            transform:
+                translateX(5px);
+
+            border-color:
+                rgba(245, 180, 0, .3);
+        }
+
+        .contact-icon {
+
+            min-width:
+                43px;
+
+            height:
+                43px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                11px;
+
+            background:
+                rgba(245, 180, 0, .12);
+
+            color:
+                var(--yellow);
+
+            font-size:
+                17px;
+        }
+
+        .contact-item strong {
+
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            margin-bottom:
+                3px;
+        }
+
+        .contact-item span {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                13px;
+        }
+
+
+        /* =========================================================
+           FORM
+        ========================================================= */
+
+        .contact-form {
+
+            background:
+                var(--bg-card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                22px;
+
+            padding:
+                32px;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+        .contact-form h3 {
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            color:
+                var(--text);
+
+            font-size:
+                25px;
+
+            margin-bottom:
+                7px;
+        }
+
+        .contact-form>p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                13px;
+
+            margin-bottom:
+                25px;
+        }
+
+        .form-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                15px;
+        }
+
+        .form-group {
+            margin-bottom:
+                15px;
+        }
+
+        .form-group.full {
+
+            grid-column:
+                1 / -1;
+        }
+
+        label {
+
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                7px;
+        }
+
+        input,
+        textarea,
+        select {
+
+            width:
+                100%;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                rgba(255, 255, 255, .045);
+
+            color:
+                var(--text);
+
+            border-radius:
+                10px;
+
+            padding:
+                13px 14px;
+
+            outline:
+                none;
+
+            transition:
+                var(--transition);
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+
+            border-color:
+                var(--yellow);
+
+            box-shadow:
+                0 0 0 3px rgba(245, 180, 0, .08);
+        }
+
+        textarea {
+
+            min-height:
+                125px;
+
+            resize:
+                vertical;
+        }
+
+        select option {
+
+            color:
+                #111;
+        }
+
+        .form-submit {
+
+            width:
+                100%;
+
+            border:
+                none;
+
+            cursor:
+                pointer;
+        }
+
+        #formMessage {
+
+            display:
+                none;
+
+            margin-top:
+                15px;
+
+            padding:
+                12px;
+
+            border-radius:
+                9px;
+
+            background:
+                rgba(40, 200, 120, .12);
+
+            color:
+                #39b978;
+
+            font-size:
+                13px;
+
+            text-align:
+                center;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            padding:
+                55px 0 25px;
+
+            background:
+                #050d17;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+        .footer-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.3fr .7fr .7fr;
+
+            gap:
+                50px;
+
+            padding-bottom:
+                45px;
+        }
+
+        .footer-about p {
+
+            color:
+                #8997a7;
+
+            max-width:
+                410px;
+
+            font-size:
+                13px;
+
+            margin-top:
+                18px;
+        }
+
+        footer h4 {
+
+            color:
+                white;
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            margin-bottom:
+                18px;
+        }
+
+        .footer-links {
+
+            display:
+                grid;
+
+            gap:
+                10px;
+        }
+
+        .footer-links a {
+
+            color:
+                #8997a7;
+
+            font-size:
+                13px;
+
+            transition:
+                var(--transition);
+        }
+
+        .footer-links a:hover {
+
+            color:
+                var(--yellow);
+
+            transform:
+                translateX(3px);
+        }
+
+        .footer-bottom {
+
+            padding-top:
+                22px;
+
+            border-top:
+                1px solid var(--border);
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            color:
+                #68788b;
+
+            font-size:
+                12px;
+        }
+
+
+        /* =========================================================
+           FLOATING CALL
+        ========================================================= */
+
+        .floating-call {
+
+            position:
+                fixed;
+
+            right:
+                22px;
+
+            bottom:
+                22px;
+
+            z-index:
+                900;
+
+            width:
+                57px;
+
+            height:
+                57px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--yellow);
+
+            color:
+                #07111f;
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, .3);
+
+            font-size:
+                20px;
+
+            animation:
+                pulse 2.3s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 0 0 0 rgba(245, 180, 0, .35),
+                    0 12px 35px rgba(0, 0, 0, .3);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 0 12px rgba(245, 180, 0, 0),
+                    0 12px 35px rgba(0, 0, 0, .3);
+            }
+        }
+
+
+        /* =========================================================
+           SCROLL ANIMATION
+        ========================================================= */
+
+        .reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(35px);
+
+            transition:
+                opacity .75s ease,
+                transform .75s cubic-bezier(.2, .65, .25, 1);
+        }
+
+        .reveal.visible {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay:
+                .1s;
+        }
+
+        .delay-2 {
+            transition-delay:
+                .2s;
+        }
+
+        .delay-3 {
+            transition-delay:
+                .3s;
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            /* 
+               MOBILE HEADER 
+               Switch back to flex so the centered nav doesn't break the layout.
+            */
+
+            .navbar {
+
+                position: relative;
+
+                display: flex;
+
+                justify-content: space-between;
+            }
+
+            .nav-right {
+
+                gap: 9px;
+            }
+
+            nav {
+
+                position:
+                    absolute;
+
+                top:
+                    82px;
+
+                left:
+                    4%;
+
+                width:
+                    92%;
+
+                padding:
+                    20px;
+
+                border-radius:
+                    16px;
+
+                background:
+                    rgba(7, 17, 31, .98);
+
+                border:
+                    1px solid var(--border);
+
+                display:
+                    none;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    stretch;
+
+                gap:
+                    5px;
+
+                box-shadow:
+                    0 20px 50px rgba(0, 0, 0, .25);
+            }
+
+            body.light-mode nav {
+
+                background:
+                    rgba(255, 255, 255, .98);
+            }
+
+            nav.active {
+
+                display:
+                    flex;
+            }
+
+            nav a {
+
+                padding:
+                    12px 10px;
+            }
+
+            .menu-btn {
+
+                display:
+                    grid;
+            }
+
+            /* HIDE CALL NOW BUTTON ON MOBILE */
+            .nav-call {
+                display: none;
+            }
+
+            .trust-inner {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .about-grid,
+            .why-grid,
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .about-image,
+            .why-image {
+
+                max-width:
+                    700px;
+            }
+
+            .services-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .review-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .emergency-inner,
+            .cta-box {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+            .cta-box {
+
+                padding:
+                    45px;
+            }
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .section {
+
+                padding:
+                    75px 0;
+            }
+
+            .navbar {
+
+                min-height:
+                    72px;
+            }
+
+
+            /*
+                MOBILE HEADER POSITION
+
+                Theme toggle is now BEFORE menu button.
+                Both remain visible at all times.
+            */
+
+            .nav-right {
+
+                gap:
+                    8px;
+            }
+
+            .theme-toggle,
+            .menu-btn {
+
+                width:
+                    40px;
+
+                height:
+                    40px;
+
+                min-width:
+                    40px;
+            }
+
+            nav {
+
+                top:
+                    72px;
+            }
+
+            .logo-text {
+
+                font-size:
+                    13px;
+            }
+
+            .logo-icon {
+
+                width:
+                    39px;
+
+                height:
+                    39px;
+            }
+
+            .hero {
+
+                padding:
+                    125px 0 75px;
+
+                min-height:
+                    auto;
+
+                background:
+
+                    linear-gradient(180deg,
+                        rgba(7, 17, 31, .91),
+                        rgba(7, 17, 31, .97)),
+
+                    url("https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200") center / cover;
+            }
+
+            body.light-mode .hero {
+
+                background:
+
+                    linear-gradient(180deg,
+                        rgba(246, 248, 251, .92),
+                        rgba(246, 248, 251, .98)),
+
+                    url("https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200") center / cover;
+            }
+
+            .hero h1 {
+
+                font-size:
+                    clamp(40px, 12vw, 62px);
+
+                letter-spacing:
+                    -2px;
+            }
+
+            .hero p {
+
+                font-size:
+                    16px;
+            }
+
+            .hero-stats {
+
+                gap:
+                    20px;
+
+                margin-top:
+                    38px;
+            }
+
+            .hero-stat strong {
+
+                font-size:
+                    22px;
+            }
+
+            .trust-inner {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap:
+                    15px 8px;
+            }
+
+            .trust-item {
+
+                font-size:
+                    11px;
+            }
+
+            .section-title {
+
+                font-size:
+                    35px;
+
+                line-height:
+                    1.12;
+            }
+
+            .section-description {
+
+                font-size:
+                    15px;
+            }
+
+            .about-image img,
+            .why-image img {
+
+                height:
+                    400px;
+            }
+
+            .experience-card {
+
+                right:
+                    12px;
+
+                bottom:
+                    15px;
+            }
+
+            .services-grid,
+            .review-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .section-heading {
+
+                display:
+                    block;
+            }
+
+            .section-heading .section-description {
+
+                margin-top:
+                    15px;
+            }
+
+            .emergency-number {
+
+                font-size:
+                    20px;
+            }
+
+            .features {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .cta-box {
+
+                padding:
+                    35px 25px;
+
+                border-radius:
+                    20px;
+            }
+
+            .cta-actions {
+
+                width:
+                    100%;
+
+                flex-direction:
+                    column;
+            }
+
+            .cta-actions .btn {
+
+                width:
+                    100%;
+            }
+
+            .form-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .form-group.full {
+
+                grid-column:
+                    auto;
+            }
+
+            .contact-form {
+
+                padding:
+                    23px;
+            }
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    30px;
+            }
+
+            .footer-bottom {
+
+                flex-direction:
+                    column;
+            }
+
+            .floating-call {
+
+                width:
+                    52px;
+
+                height:
+                    52px;
+
+                right:
+                    16px;
+
+                bottom:
+                    16px;
+            }
+        }
+
+
+        /* =========================================================
+           VERY SMALL MOBILE DEVICES
+        ========================================================= */
+
+        @media (max-width: 400px) {
+
+            .logo {
+
+                gap:
+                    8px;
+            }
+
+            .logo-text {
+
+                font-size:
+                    11px;
+            }
+
+            .logo-text span {
+
+                font-size:
+                    8px;
+
+                letter-spacing:
+                    1px;
+            }
+
+            .logo-icon {
+
+                width:
+                    36px;
+
+                height:
+                    36px;
+
+                border-radius:
+                    10px;
+            }
+
+            .theme-toggle,
+            .menu-btn {
+
+                width:
+                    38px;
+
+                height:
+                    38px;
+
+                min-width:
+                    38px;
+            }
+
+            .nav-right {
+
+                gap:
+                    6px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header id="header">
+
+        <div class="container navbar">
+
+
+            <!-- LOGO -->
+
+            <a href="#home" class="logo">
+
+                <div class="logo-icon">
+
+                    <i class="fi fi-rr-home"></i>
+
+                </div>
+
+                <div class="logo-text">
+
+                    Reign Design
+                    <span>Custom Home Builders LLC</span>
+
+                </div>
+
+            </a>
+
+
+            <!-- =====================================================
+                 NAVIGATION (CENTERED IN DESKTOP)
+            ====================================================== -->
+
+            <nav id="nav">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#why">
+                    Why Us
+                </a>
+
+                <a href="#reviews">
+                    Reviews
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- =====================================================
+                 HEADER CONTROLS (RIGHT SIDE)
+            ====================================================== -->
+
+            <div class="nav-right">
+
+
+                <!-- THEME TOGGLE -->
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch theme" title="Switch theme">
+
+                    <i class="fi fi-rr-moon" id="themeIcon">
+                    </i>
+
+                </button>
+
+
+                <!-- CALL BUTTON (HIDDEN ON MOBILE VIA CSS) -->
+
+                <a class="nav-call" href="tel:+14708087960">
+
+                    <i class="fi fi-rr-phone-call"></i>
+
+                    Call Now
+
+                </a>
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+
+                    <i class="fi fi-rr-menu-burger" id="menuIcon">
+                    </i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================= -->
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+
+                    <div class="hero-badge">
+
+                        <i class="fi fi-rr-shield-check"></i>
+
+                        Trusted Custom Home Builder in Atlanta
+
+                    </div>
+
+
+                    <h1>
+
+                        Building Homes
+
+                        <span>
+                            With Vision
+                        </span>
+
+                        & Craftsmanship.
+
+                    </h1>
+
+
+                    <p>
+
+                        Reign Design Custom Home Builders LLC delivers
+                        exceptional residential construction and remodeling
+                        services across Atlanta, Georgia.
+                        Available <strong>Monday to Friday, 8:30am – 5:00pm.</strong>
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a href="tel:+14708087960" class="btn btn-primary">
+
+                            <i class="fi fi-rr-phone-call"></i>
+
+                            Call +1 470-808-7960
+
+                        </a>
+
+
+                        <a href="#contact" class="btn btn-outline">
+
+                            <i class="fi fi-rr-paper-plane"></i>
+
+                            Request a Quote
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-stats">
+
+
+                        <div class="hero-stat">
+
+                            <strong>
+                                Custom
+                            </strong>
+
+                            <span>
+                                Home Design
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-stat">
+
+                            <strong>
+                                Atlanta
+                            </strong>
+
+                            <span>
+                                Service Area
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-stat">
+
+                            <strong>
+                                Quality
+                            </strong>
+
+                            <span>
+                                Craftsmanship
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-stat">
+
+                            <strong>
+                                Licensed
+                            </strong>
+
+                            <span>
+                                & Insured
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TRUST
+        ====================================================== -->
+
+        <section class="trust-bar">
+
+            <div class="container trust-inner">
+
+
+                <div class="trust-item">
+
+                    <i class="fi fi-rr-clock"></i>
+
+                    Mon–Fri 8:30am – 5:00pm
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <i class="fi fi-rr-star"></i>
+
+                    Quality Construction
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <i class="fi fi-rr-badge-check"></i>
+
+                    Licensed Professionals
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <i class="fi fi-rr-comment-check"></i>
+
+                    Client-Focused Service
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section class="section" id="about">
+
+            <div class="container about-grid">
+
+
+                <div class="about-image reveal">
+
+                    <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                        alt="Custom home construction project in Atlanta" loading="lazy">
+
+                    <div class="experience-card">
+
+                        <strong>
+                            Atlanta
+                        </strong>
+
+                        <span>
+                            BASED BUILDER
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-content reveal delay-1">
+
+                    <div class="section-label">
+
+                        <i class="fi fi-rr-home"></i>
+
+                        About Our Company
+
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Building homes with
+                        precision and integrity.
+
+                    </h2>
+
+
+                    <p>
+
+                        Reign Design Custom Home Builders LLC is a
+                        full-service construction company based in
+                        Atlanta, Georgia. We specialize in custom home
+                        construction, renovations and residential
+                        building projects.
+
+                    </p>
+
+
+                    <p>
+
+                        From the initial design phase to the final
+                        walkthrough, we work closely with our clients
+                        to bring their vision to life with quality
+                        craftsmanship and attention to detail.
+
+                    </p>
+
+
+                    <ul class="check-list">
+
+                        <li>
+
+                            <i class="fi fi-rr-check"></i>
+
+                            Custom home design and construction
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fi fi-rr-check"></i>
+
+                            Transparent communication throughout
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fi fi-rr-check"></i>
+
+                            High-quality materials and workmanship
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="fi fi-rr-check"></i>
+
+                            Serving Atlanta and surrounding areas
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SERVICES
+        ====================================================== -->
+
+        <section class="section services" id="services">
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <i class="fi fi-rr-tools"></i>
+
+                            Our Services
+
+                        </div>
+
+
+                        <h2 class="section-title">
+
+                            Construction services
+                            built around you.
+
+                        </h2>
+
+                    </div>
+
+
+                    <p class="section-description">
+
+                        From new builds to complete renovations,
+                        we deliver construction solutions that meet
+                        the highest standards of quality.
+
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- =================================================
+                         1. CUSTOM HOMES
+                    ================================================== -->
+
+                    <article class="service-card reveal">
+
+                        <div class="service-image">
+
+                            <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                alt="Custom home construction" loading="lazy">
+
+                        </div>
+
+
+                        <div class="service-body">
+
+                            <div class="service-icon">
+
+                                <i class="fi fi-rr-home"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Custom Home Building
+                            </h3>
+
+
+                            <p>
+
+                                Design and build your dream home with
+                                a team that values quality, precision
+                                and your unique vision.
+
+                            </p>
+
+
+                            <a href="tel:+14708087960" class="service-link">
+
+                                Discuss Your Project
+
+                                <i class="fi fi-rr-arrow-small-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         2. REMODELING
+                    ================================================== -->
+
+                    <article class="service-card reveal delay-1">
+
+                        <div class="service-image">
+
+                            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                alt="Home renovation and remodeling" loading="lazy">
+
+                        </div>
+
+
+                        <div class="service-body">
+
+                            <div class="service-icon">
+
+                                <i class="fi fi-rr-paint-roller"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Home Remodeling
+                            </h3>
+
+
+                            <p>
+
+                                Transform your living space with
+                                professional remodeling services
+                                tailored to your needs and style.
+
+                            </p>
+
+
+                            <a href="tel:+14708087960" class="service-link">
+
+                                Enquire Now
+
+                                <i class="fi fi-rr-arrow-small-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         3. KITCHEN & BATH
+                    ================================================== -->
+
+                    <article class="service-card reveal delay-2">
+
+                        <div class="service-image">
+
+                            <img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                alt="Modern kitchen renovation" loading="lazy">
+
+                        </div>
+
+
+                        <div class="service-body">
+
+
+                            <div class="service-icon">
+
+                                <svg class="service-svg" viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+
+                                    <path d="M9 22V12h6v10"></path>
+
+                                </svg>
+
+                            </div>
+
+
+                            <h3>
+                                Kitchen & Bathroom
+                            </h3>
+
+
+                            <p>
+
+                                Upgrade your kitchen or bathroom with
+                                modern designs and expert construction
+                                from our experienced team.
+
+                            </p>
+
+
+                            <a href="tel:+14708087960" class="service-link">
+
+                                Book A Consultation
+
+                                <i class="fi fi-rr-arrow-small-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         4. GENERAL CONTRACTING
+                    ================================================== -->
+
+                    <article class="service-card reveal">
+
+                        <div class="service-image">
+
+                            <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                alt="General contracting services" loading="lazy">
+
+                        </div>
+
+
+                        <div class="service-body">
+
+                            <div class="service-icon">
+
+                                <i class="fi fi-rr-hard-hat"></i>
+
+                            </div>
+
+
+                            <h3>
+                                General Contracting
+                            </h3>
+
+
+                            <p>
+
+                                Comprehensive construction management
+                                for residential projects of all sizes,
+                                from start to finish.
+
+                            </p>
+
+
+                            <a href="tel:+14708087960" class="service-link">
+
+                                Discuss Your Build
+
+                                <i class="fi fi-rr-arrow-small-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         5. ADDITIONS
+                    ================================================== -->
+
+                    <article class="service-card reveal delay-1">
+
+                        <div class="service-image">
+
+                            <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                alt="Home addition construction" loading="lazy">
+
+                        </div>
+
+
+                        <div class="service-body">
+
+
+                            <div class="service-icon">
+
+                                <svg class="service-svg" viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+
+                                    <path d="M9 22V12h6v10"></path>
+
+                                    <circle cx="12" cy="6" r="1"></circle>
+
+                                </svg>
+
+                            </div>
+
+
+                            <h3>
+                                Home Additions
+                            </h3>
+
+
+                            <p>
+
+                                Expand your living space with seamless
+                                home additions that match your existing
+                                property and lifestyle.
+
+                            </p>
+
+
+                            <a href="tel:+14708087960" class="service-link">
+
+                                Get Assistance
+
+                                <i class="fi fi-rr-arrow-small-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         6. OUTDOOR LIVING
+                    ================================================== -->
+
+                    <article class="service-card reveal delay-2">
+
+                        <div class="service-image">
+
+                            <img src="https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                alt="Outdoor living space construction" loading="lazy">
+
+                        </div>
+
+
+                        <div class="service-body">
+
+
+                            <div class="service-icon">
+
+                                <i class="fi fi-rr-sun"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Outdoor Living Spaces
+                            </h3>
+
+
+                            <p>
+
+                                Create beautiful outdoor areas for
+                                relaxing and entertaining, designed
+                                and built to last.
+
+                            </p>
+
+
+                            <a href="tel:+14708087960" class="service-link">
+
+                                Call Today
+
+                                <i class="fi fi-rr-arrow-small-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EMERGENCY CTA
+        ====================================================== -->
+
+        <section class="emergency">
+
+            <div class="container emergency-inner reveal">
+
+
+                <div>
+
+                    <h2>
+                        Planning your next project?
+                    </h2>
+
+
+                    <p>
+
+                        Whether you're building a new home or
+                        renovating an existing space, Reign Design
+                        is ready to bring your vision to life.
+
+                    </p>
+
+                </div>
+
+
+                <a href="tel:+14708087960" class="emergency-number">
+
+                    <i class="fi fi-rr-phone-call"></i>
+
+                    +1 470-808-7960
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHY CHOOSE
+        ====================================================== -->
+
+        <section class="section" id="why">
+
+            <div class="container why-grid">
+
+
+                <div class="why-image reveal">
+
+                    <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                        alt="Professional construction team on site" loading="lazy">
+
+                </div>
+
+
+                <div class="reveal delay-1">
+
+                    <div class="section-label">
+
+                        <i class="fi fi-rr-shield-check"></i>
+
+                        Why Choose Us
+
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        A construction partner
+                        you can trust.
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Clients choose Reign Design for our commitment
+                        to quality, transparent communication and
+                        exceptional craftsmanship on every project.
+
+                    </p>
+
+
+                    <div class="features">
+
+
+                        <div class="feature">
+
+                            <i class="fi fi-rr-clock"></i>
+
+                            <h3>
+                                Reliable Schedule
+                            </h3>
+
+                            <p>
+                                We respect your time and keep your
+                                project on track from start to finish.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fi fi-rr-star"></i>
+
+                            <h3>
+                                Quality First
+                            </h3>
+
+                            <p>
+                                Every detail is considered to ensure
+                                lasting quality and beautiful results.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fi fi-rr-comments"></i>
+
+                            <h3>
+                                Clear Communication
+                            </h3>
+
+                            <p>
+                                We keep you informed and involved
+                                throughout every stage of your project.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <i class="fi fi-rr-badge-check"></i>
+
+                            <h3>
+                                Licensed & Insured
+                            </h3>
+
+                            <p>
+                                Work with confidence knowing your
+                                project is in professional hands.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             REVIEWS
+        ====================================================== -->
+
+        <section class="section reviews" id="reviews">
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div>
+
+                        <div class="section-label">
+
+                            <i class="fi fi-rr-star"></i>
+
+                            Customer Reviews
+
+                        </div>
+
+
+                        <h2 class="section-title">
+
+                            What our clients say.
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="rating-box">
+
+                        <div class="rating-number">
+                            5.0
+                        </div>
+
+                        <div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                            <div class="rating-text">
+                                Client Satisfaction
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="review-grid">
+
+
+                    <article class="review-card reveal">
+
+                        <div class="review-top">
+
+                            <div class="reviewer">
+
+                                <div class="review-avatar">
+                                    SM
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Sarah M.
+                                    </strong>
+
+                                    <span>
+                                        Homeowner
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
+
+                        <p>
+
+                            "Reign Design built our custom home and
+                            the entire process was smooth and
+                            professional. The attention to detail
+                            was outstanding and we couldn't be
+                            happier with the result."
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="review-card reveal delay-1">
+
+                        <div class="review-top">
+
+                            <div class="reviewer">
+
+                                <div class="review-avatar">
+                                    JD
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        James D.
+                                    </strong>
+
+                                    <span>
+                                        Property Owner
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
+
+                        <p>
+
+                            "Our kitchen renovation exceeded all
+                            expectations. The team was punctual,
+                            communicative and the quality of work
+                            was exceptional. Highly recommend."
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="review-card reveal delay-2">
+
+                        <div class="review-top">
+
+                            <div class="reviewer">
+
+                                <div class="review-avatar">
+                                    AL
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Amanda L.
+                                    </strong>
+
+                                    <span>
+                                        Homeowner
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
+
+                        <p>
+
+                            "Professional from start to finish.
+                            Reign Design handled our home addition
+                            with care and expertise. The result is
+                            beautiful and exactly what we wanted."
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="section" id="faq">
+
+            <div class="container">
+
+
+                <div style="text-align:center;" class="reveal">
+
+                    <div class="section-label">
+
+                        <i class="fi fi-rr-interrogation"></i>
+
+                        Frequently Asked Questions
+
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Questions?
+                        We've got answers.
+
+                    </h2>
+
+
+                    <p class="section-description" style="margin:auto;">
+
+                        Find quick answers to common questions
+                        before getting in touch.
+
+                    </p>
+
+                </div>
+
+
+                <div class="faq-wrap">
+
+
+                    <div class="faq-item active reveal">
+
+                        <button class="faq-question">
+
+                            What areas do you serve?
+
+                            <i class="fi fi-rr-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Reign Design Custom Home Builders LLC
+                                is based in Atlanta, Georgia, and serves
+                                clients throughout the Atlanta metro
+                                area and surrounding communities.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            Do you build custom homes from scratch?
+
+                            <i class="fi fi-rr-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Yes. We specialize in custom home
+                                construction and can guide you through
+                                the entire process, from design and
+                                planning to final construction.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            Can you help with renovations and remodels?
+
+                            <i class="fi fi-rr-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Absolutely. We offer a full range of
+                                remodeling services including kitchens,
+                                bathrooms, home additions and whole-home
+                                renovations.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            Are you licensed and insured?
+
+                            <i class="fi fi-rr-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                Yes. Reign Design is a fully licensed
+                                and insured construction company. You
+                                can have confidence that your project
+                                is in professional hands.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            How can I request a quote?
+
+                            <i class="fi fi-rr-plus"></i>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+
+                                The fastest option is to call
+                                +1 470-808-7960. You can also use
+                                the enquiry form below to describe
+                                your project.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="cta">
+
+            <div class="container">
+
+
+                <div class="cta-box reveal">
+
+
+                    <div>
+
+                        <h2>
+                            Ready to start your project?
+                        </h2>
+
+                        <p>
+                            Speak directly with Reign Design
+                            Custom Home Builders LLC and let's
+                            discuss your vision.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-actions">
+
+
+                        <a href="tel:+14708087960" class="btn cta-dark">
+
+                            <i class="fi fi-rr-phone-call"></i>
+
+                            Call Now
+
+                        </a>
+
+
+                        <a href="#contact" class="btn btn-outline" style="
+                                border-color:rgba(7,17,31,.25);
+                                color:#07111f;
+                            ">
+
+                            Request Quote
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section class="section contact" id="contact">
+
+            <div class="container contact-grid">
+
+
+                <div class="reveal">
+
+
+                    <div class="section-label">
+
+                        <i class="fi fi-rr-paper-plane"></i>
+
+                        Get In Touch
+
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Let's build
+                        something great.
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Tell us about your project or call directly
+                        to discuss your construction needs.
+
+                    </p>
+
+
+                    <div class="contact-info">
+
+
+                        <a href="tel:+14708087960" class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fi fi-rr-phone-call"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Phone
+                                </strong>
+
+                                <span>
+                                    +1 470-808-7960
+                                </span>
+
+                            </div>
+
+                        </a>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fi fi-rr-marker"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Address
+                                </strong>
+
+                                <span>
+                                    730 Peachtree St NE, Atlanta, GA 30308
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fi fi-rr-clock"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Opening Hours
+                                </strong>
+
+                                <span>
+                                    Mon–Fri 8:30am – 5:00pm
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fi fi-rr-building"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Business Type
+                                </strong>
+
+                                <span>
+                                    Real Estate Builders & Construction
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form reveal delay-1">
+
+
+                    <h3>
+                        Request a Quote
+                    </h3>
+
+
+                    <p>
+                        Complete the form and tell us about
+                        your construction project.
+                    </p>
+
+
+                    <form id="quoteForm">
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Your Name
+                                </label>
+
+                                <input type="text" id="name" placeholder="John Smith" required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel" id="phone" placeholder="+1..." required>
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label for="service">
+                                    Service Required
+                                </label>
+
+                                <select id="service" required>
+
+                                    <option value="">
+                                        Select a service
+                                    </option>
+
+                                    <option>
+                                        Custom Home Building
+                                    </option>
+
+                                    <option>
+                                        Home Remodeling
+                                    </option>
+
+                                    <option>
+                                        Kitchen & Bathroom
+                                    </option>
+
+                                    <option>
+                                        General Contracting
+                                    </option>
+
+                                    <option>
+                                        Home Additions
+                                    </option>
+
+                                    <option>
+                                        Outdoor Living Spaces
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label for="message">
+                                    Tell Us About Your Project
+                                </label>
+
+                                <textarea id="message"
+                                    placeholder="Briefly describe your project or construction needs..."
+                                    required></textarea>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary form-submit">
+
+                            <i class="fi fi-rr-paper-plane"></i>
+
+                            Send Enquiry
+
+                        </button>
+
+
+                        <div id="formMessage">
+
+                            Thanks! Your enquiry has been prepared.
+                            Please call +1 470-808-7960 to discuss
+                            your project directly.
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <div class="footer-about">
+
+
+                    <a href="#home" class="logo">
+
+                        <div class="logo-icon">
+
+                            <i class="fi fi-rr-home"></i>
+
+                        </div>
+
+
+                        <div class="logo-text">
+
+                            Reign Design
+                            <span>Custom Home Builders LLC</span>
+
+                        </div>
+
+                    </a>
+
+
+                    <p>
+
+                        Professional construction services for
+                        clients across Atlanta, Georgia. Custom
+                        homes, renovations and quality builds.
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+
+                    <div class="footer-links">
+
+                        <a href="#home">
+                            Home
+                        </a>
+
+                        <a href="#about">
+                            About
+                        </a>
+
+                        <a href="#services">
+                            Services
+                        </a>
+
+                        <a href="#reviews">
+                            Reviews
+                        </a>
+
+                        <a href="#faq">
+                            FAQ
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Contact
+                    </h4>
+
+
+                    <div class="footer-links">
+
+                        <a href="tel:+14708087960">
+                            +1 470-808-7960
+                        </a>
+
+                        <a href="#contact">
+                            730 Peachtree St NE
+                        </a>
+
+                        <a href="#contact">
+                            Atlanta, GA 30308
+                        </a>
+
+                        <a href="#contact">
+                            Mon–Fri 8:30am – 5:00pm
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Reign Design Custom Home Builders LLC.
+                    All rights reserved.
+                </span>
+
+                <span>
+                    Professional Construction Services · Atlanta · Georgia
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         FLOATING CALL
+    ========================================================= -->
+
+    <a href="tel:+14708087960" class="floating-call" aria-label="Call Reign Design Custom Home Builders">
+
+        <i class="fi fi-rr-phone-call"></i>
+
+    </a>
+
+
+    <script>
+
+
+        /* =========================================================
+           HEADER SCROLL
+        ========================================================= */
+
+        const header =
+            document.getElementById("header");
+
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 30) {
+
+                header.classList.add("scrolled");
+
+            } else {
+
+                header.classList.remove("scrolled");
+
+            }
+
+        });
+
+
+        /* =========================================================
+           MOBILE MENU
+           
+           Theme button is completely independent from nav.
+        ========================================================= */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const menuIcon =
+            document.getElementById("menuIcon");
+
+        const nav =
+            document.getElementById("nav");
+
+
+        menuBtn.addEventListener("click", () => {
+
+            const isOpen =
+                nav.classList.toggle("active");
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+
+            if (isOpen) {
+
+                menuIcon.className =
+                    "fi fi-rr-cross";
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Close navigation"
+                );
+
+            } else {
+
+                menuIcon.className =
+                    "fi fi-rr-menu-burger";
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open navigation"
+                );
+
+            }
+
+        });
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU WHEN LINK IS CLICKED
+        ========================================================= */
+
+        document
+            .querySelectorAll("nav a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    nav.classList.remove("active");
+
+                    menuIcon.className =
+                        "fi fi-rr-menu-burger";
+
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuBtn.setAttribute(
+                        "aria-label",
+                        "Open navigation"
+                    );
+
+                });
+
+            });
+
+
+        /* =========================================================
+           DARK / LIGHT MODE
+        ========================================================= */
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+        const themeIcon =
+            document.getElementById("themeIcon");
+
+
+        function updateThemeIcon() {
+
+            if (
+                document.body.classList.contains("light-mode")
+            ) {
+
+                themeIcon.className =
+                    "fi fi-rr-sun";
+
+                themeToggle.title =
+                    "Switch to dark mode";
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    "Switch to dark mode"
+                );
+
+            } else {
+
+                themeIcon.className =
+                    "fi fi-rr-moon";
+
+                themeToggle.title =
+                    "Switch to light mode";
+
+                themeToggle.setAttribute(
+                    "aria-label",
+                    "Switch to light mode"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           LOAD SAVED THEME
+        ========================================================= */
+
+        const savedTheme =
+            localStorage.getItem("reign-design-theme");
+
+
+        if (savedTheme === "light") {
+
+            document.body.classList.add("light-mode");
+
+        }
+
+
+        updateThemeIcon();
+
+
+        /* =========================================================
+           THEME TOGGLE
+        ========================================================= */
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("light-mode");
+
+
+            const currentTheme =
+                document.body.classList.contains("light-mode")
+                    ? "light"
+                    : "dark";
+
+
+            localStorage.setItem(
+                "reign-design-theme",
+                currentTheme
+            );
+
+
+            updateThemeIcon();
+
+        });
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: .12
+                }
+
+            );
+
+
+        document
+            .querySelectorAll(".reveal")
+            .forEach(element => {
+
+                observer.observe(element);
+
+            });
+
+
+        /* =========================================================
+           FAQ
+        ========================================================= */
+
+        const faqItems =
+            document.querySelectorAll(".faq-item");
+
+
+        faqItems.forEach(item => {
+
+            const question =
+                item.querySelector(".faq-question");
+
+            const answer =
+                item.querySelector(".faq-answer");
+
+
+            question.addEventListener("click", () => {
+
+                const wasActive =
+                    item.classList.contains("active");
+
+
+                faqItems.forEach(other => {
+
+                    other.classList.remove(
+                        "active"
+                    );
+
+                    const otherAnswer =
+                        other.querySelector(
+                            ".faq-answer"
+                        );
+
+                    otherAnswer.style.maxHeight =
+                        null;
+
+                });
+
+
+                if (!wasActive) {
+
+                    item.classList.add("active");
+
+                    answer.style.maxHeight =
+                        answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+
+        /* =========================================================
+           FIRST FAQ OPEN
+        ========================================================= */
+
+        const firstFaq =
+            document.querySelector(
+                ".faq-item.active"
+            );
+
+
+        if (firstFaq) {
+
+            const answer =
+                firstFaq.querySelector(
+                    ".faq-answer"
+                );
+
+            answer.style.maxHeight =
+                answer.scrollHeight + "px";
+
+        }
+
+
+        /* =========================================================
+           FORM
+        ========================================================= */
+
+        const quoteForm =
+            document.getElementById("quoteForm");
+
+        const formMessage =
+            document.getElementById("formMessage");
+
+
+        quoteForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+
+                formMessage.style.display =
+                    "block";
+
+
+                quoteForm.reset();
+
+
+                setTimeout(() => {
+
+                    formMessage.style.display =
+                        "none";
+
+                }, 7000);
+
+            }
+        );
+
+
+        /* =========================================================
+           SMOOTH ANCHORS
+        ========================================================= */
+
+        document
+            .querySelectorAll('a[href^="#"]')
+            .forEach(anchor => {
+
+                anchor.addEventListener(
+                    "click",
+                    function (event) {
+
+                        const targetId =
+                            this.getAttribute("href");
+
+
+                        if (
+                            targetId === "#"
+                        ) return;
+
+
+                        const target =
+                            document.querySelector(
+                                targetId
+                            );
+
+
+                        if (target) {
+
+                            event.preventDefault();
+
+
+                            const headerHeight =
+                                header.offsetHeight;
+
+
+                            const targetPosition =
+                                target.getBoundingClientRect()
+                                    .top
+                                +
+                                window.scrollY
+                                -
+                                headerHeight;
+
+
+                            window.scrollTo({
+
+                                top:
+                                    targetPosition,
+
+                                behavior:
+                                    "smooth"
+
+                            });
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+        /* =========================================================
+           IMAGE ERROR FALLBACK
+        ========================================================= */
+
+        document
+            .querySelectorAll(".service-image img")
+            .forEach(img => {
+
+                img.addEventListener(
+                    "error",
+                    function () {
+
+                        this.style.display =
+                            "none";
+
+                        this.parentElement.style.background =
+                            "linear-gradient(135deg,#14263a,#24384d)";
+
+                    }
+                );
+
+            });
+
+
+        /* =========================================================
+           RESIZE FIX
+           
+           Keeps an already-open FAQ correctly sized when 
+           the viewport changes.
+        ========================================================= */
+
+        window.addEventListener("resize", () => {
+
+            const activeFaq =
+                document.querySelector(
+                    ".faq-item.active .faq-answer"
+                );
+
+
+            if (activeFaq) {
+
+                activeFaq.style.maxHeight =
+                    activeFaq.scrollHeight + "px";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
